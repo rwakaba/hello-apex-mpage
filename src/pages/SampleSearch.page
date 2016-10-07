@@ -1,0 +1,14 @@
+<apex:page controller="SampleController" action="{!search}">
+    <p>{!prop.myAccount.Name}</p>
+    <form method="GET" action="{!URLFOR($Page.SampleSearch)}">
+        <input type="text" name="q" value="{!prop.q}"/>
+        <input type="hidden" name="limit" value="{!prop.limitSize}"/>
+        <input type="hidden" name="offset" value="{!prop.offset}"/>
+        <button type="submit" name="searchButton" value="search">Search</button>
+    </form>
+    <ul>
+    <apex:repeat value="{!prop.accounts}" var="a">
+        <li><a href="/{!URLFOR($Page.SampleDetail)?id=a.Id}">{!a.Name}</a></li>
+    </apex:repeat>
+    </ul>
+</apex:page>

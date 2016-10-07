@@ -1,0 +1,13 @@
+public with sharing class DebugPageController {
+
+    public String message { get; private set; }
+    public String typeName { get; private set; }
+    public String[] stackTrace { get; private set; }
+
+    public DebugPageController() {
+        message = ApexPages.currentPage().getParameters().get('message');
+        typeName = ApexPages.currentPage().getParameters().get('typeName');
+        String st = ApexPages.currentPage().getParameters().get('stacktrace');
+        stackTrace = st.split('\n');
+    }
+}
