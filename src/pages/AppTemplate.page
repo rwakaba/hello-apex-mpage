@@ -1,0 +1,10 @@
+<apex:page showHeader="false" applyHtmlTag="false" sidebar="false" standardStylesheets="false">
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <apex:insert name="content" />
+    </body>
+</html>
+</apex:page>
