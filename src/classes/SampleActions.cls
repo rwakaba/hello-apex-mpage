@@ -9,7 +9,7 @@ public class SampleActions {
         }
         
         public override PageReference handleAction() {
-            Id accountId = getSalesforceId('id');
+            Id accountId = getParam.salesforceId('id');
             Account a = [SELECT name FROM Account WHERE Id = :accountId];
 
             if (a == null) {
@@ -32,13 +32,13 @@ public class SampleActions {
         }
 
         public override PageReference handleAction() {
-            String q = getParameter('q');
+            String q = getParam.get('q');
             if (String.isBlank(q)) { return null; }
 
             SampleProperty prop = (SampleProperty) property;
             prop.q = q;
-            prop.offset = getParameterAsInteger('offset', 0);
-            prop.limitSize = getParameterAsInteger('limit', 50);
+            prop.offset = getParam.intValue('offset', 0);
+            prop.limitSize = getParam.intValue('limit', 50);
 
             String accountName = q + '%';
             prop.accounts = [SELECT Id, Name FROM Account 

@@ -11,6 +11,12 @@ public abstract class MyAppActionHandler extends ActionHandler {
         ParameterCheck rule = new ParameterCheck(paramName);
         return rule;
     }
+
+    protected GetParameter getParam {
+        get {
+            return GetParameter.getInstance();
+        }
+    }
     
     protected AppSession session {
         get {
