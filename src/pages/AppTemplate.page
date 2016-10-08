@@ -1,10 +1,17 @@
 <apex:page showHeader="false" applyHtmlTag="false" sidebar="false" standardStylesheets="false">
 <html>
     <head>
-        
+        <link rel="stylesheet" href="{!$Resource.papier}"></link>
     </head>
     <body>
-        <apex:insert name="content" />
+        <section class="panel">
+          <header class="bg-subtle">
+            this is header
+          </header>
+          <main>
+            <apex:insert name="content" />
+          </main>
+        </section>
     </body>
 </html>
 </apex:page>

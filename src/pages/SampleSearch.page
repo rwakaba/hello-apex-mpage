@@ -1,4 +1,8 @@
 <apex:page controller="SampleController" action="{!search}">
+    <ul class="tabs bg-blue">
+      <li><a href="{!URLFOR($Page.Top)}">Top</a></li>
+      <li class="active"><a href="{!URLFOR($Page.Profile)}">Profile</a></li>
+    </ul>
     <p>{!prop.myAccount.Name}</p>
     <form method="GET" action="{!URLFOR($Page.SampleSearch)}">
         <input type="text" name="q" value="{!prop.q}"/>

@@ -1,0 +1,12 @@
+<apex:page showHeader="false" applyHtmlTag="false" sidebar="false" standardStylesheets="false">
+
+    <apex:composition template="AppTemplate">
+        <apex:define name="content">
+            <ul class="tabs bg-blue">
+              <li class="active"><a href="{!URLFOR($Page.Top)}">Top</a></li>
+              <li><a href="{!URLFOR($Page.Profile)}">Profile</a></li>
+            </ul>
+            <h1>hello top page</h1>
+        </apex:define>
+    </apex:composition>
+</apex:page>
