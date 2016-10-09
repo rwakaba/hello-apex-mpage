@@ -1,0 +1,16 @@
+<apex:page showHeader="false" applyHtmlTag="false" sidebar="false" standardStylesheets="false" controller="TodoController" action="{!get}">
+    <apex:composition template="AppTemplate">
+        <apex:define name="content">
+            <c:AppNavigationBar current="todo"/>
+            <apex:form>
+                Todo: <apex:inputText value="{!todo.Name}"/>
+                <c:ValidationMessage validationResults="{!vResult}" name="title" label="Title" />
+                Content: <apex:inputText value="{!todo.Content__c}"/>
+                <c:ValidationMessage validationResults="{!vResult}" name="content" label="Content" />
+                Done: <apex:inputCheckbox value="{!todo.Done__c}"/>
+                <c:ValidationMessage validationResults="{!vResult}" name="status" label="status" />
+                <apex:commandButton value="Save" action="{!save}"/>
+            </apex:form>
+        </apex:define>
+    </apex:composition>
+</apex:page>

@@ -2,10 +2,7 @@
 
     <apex:composition template="AppTemplate">
         <apex:define name="content">
-            <ul class="tabs bg-blue">
-              <li><a href="{!URLFOR($Page.Top)}">Top</a></li>
-              <li class="active"><a href="{!URLFOR($Page.Profile)}">Profile</a></li>
-            </ul>
+            <c:AppNavigationBar current="profile"/>
             <apex:form >
                 <div>
                     <div>
