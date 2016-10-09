@@ -5,7 +5,7 @@ public with sharing class TopController {
     /////////////////////////////////////////
 
     public PageReference get() {
-        return new TopActions.GetHandler().setProperty(this).action();
+        return new GetHandler().setProperty(this).action();
     }
 
     /////////////////////////////////////////
